@@ -4,3 +4,14 @@ __pycache__/
 *.pyc
 .env
 .env.local
+
+# Python
+.venv/
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+
+# 計算結果・作業用CSV（社内データを含む可能性があるためコミットしない）
+results/
+work/

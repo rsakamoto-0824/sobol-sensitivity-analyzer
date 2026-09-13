@@ -1,0 +1,4 @@
+﻿name,distribution,min,max,mean,std,mode,memo
+uniform_input,uniform,0,1,,,,一様分布：min〜max
+normal_input,normal,,,0,1,,正規分布：平均 mean・標準偏差 std
+triangular_input,triangular,-1,1,,,0,三角分布：min〜max・最頻値 mode
