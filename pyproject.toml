@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sobol-sensitivity-analyzer"
+version = "0.1.0"
+description = "Sobol感度解析（一次効果 S1・総合効果 ST）を計算するコマンドラインツール"
+readme = "README.md"
+# Python と依存ライブラリの下限は README の「必要な環境」と合わせる
+requires-python = ">=3.14.5"
+dependencies = ["numpy>=2.3.2"]
+
+[project.optional-dependencies]
+sobol = ["scipy>=1.16.1"]
+dev = ["pytest>=9.1"]
+
+[project.scripts]
+sobol-analyzer = "sobol_sensitivity.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
